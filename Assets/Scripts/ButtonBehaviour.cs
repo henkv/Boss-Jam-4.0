@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ButtonBehaviour : MonoBehaviour {
+public class ButtonBehaviour : MonoBehaviour 
+{
+	public GameObject trap;
 	public Color activeColor;
 	public bool active;
 
@@ -27,6 +29,7 @@ public class ButtonBehaviour : MonoBehaviour {
 	{
 		spriteRenderer.color = activeColor;
 		active = true;
+
 	}
 
 	void OnTriggerExit2D(Collider2D collision)
