@@ -55,13 +55,13 @@ public class PlayerBehaviour : MonoBehaviour {
 		if (Input.GetKey(leftKey))
 		{
 
-			rigidBody.AddForce (Vector2.left * horizontalFoce, ForceMode2D.Force);
+			rigidBody.AddForce (Vector2.left * horizontalFoce, ForceMode2D.Impulse);
 
 		}
 
 		if (Input.GetKey(rightKey))
 		{
-			rigidBody.AddForce (Vector2.right * horizontalFoce, ForceMode2D.Force);
+			rigidBody.AddForce (Vector2.right * horizontalFoce, ForceMode2D.Impulse);
 		}
 
 
