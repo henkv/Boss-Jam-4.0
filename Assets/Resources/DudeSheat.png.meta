@@ -1,9 +1,14 @@
 fileFormatVersion: 2
 guid: 5bb204187f76b1e408605ef18fc70de0
-timeCreated: 1460750044
+timeCreated: 1460750634
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: DudeSheat_0
+    21300002: DudeSheat_1
+    21300004: DudeSheat_2
+    21300006: DudeSheat_3
+    21300008: DudeSheat_4
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -29,8 +34,8 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
-    aniso: -1
+    filterMode: 0
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +43,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +54,98 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: DudeSheat_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 16}
+        - {x: -10, y: 11}
+        - {x: -10, y: -14}
+        - {x: -5, y: -15}
+        - {x: 9, y: -15}
+        - {x: 11, y: -11}
+        - {x: 11, y: 5}
+        - {x: 5, y: 16}
+    - name: DudeSheat_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -6, y: 16}
+        - {x: -10, y: 9}
+        - {x: -10, y: -12}
+        - {x: -8, y: -14}
+        - {x: -3, y: -16}
+        - {x: 7, y: -16}
+        - {x: 9, y: -13}
+        - {x: 9, y: 13}
+        - {x: 4, y: 16}
+    - name: DudeSheat_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 16}
+        - {x: -8, y: 13}
+        - {x: -8, y: -15}
+        - {x: -7, y: -16}
+        - {x: 8, y: -16}
+        - {x: 8, y: 9}
+        - {x: 6, y: 16}
+    - name: DudeSheat_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 16}
+        - {x: -7, y: 14}
+        - {x: -7, y: -16}
+        - {x: 6, y: -16}
+        - {x: 6, y: 16}
+    - name: DudeSheat_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 16}
+        - {x: -8, y: 13}
+        - {x: -8, y: -15}
+        - {x: -7, y: -16}
+        - {x: 8, y: -16}
+        - {x: 8, y: 9}
+        - {x: 6, y: 16}
     outline: []
   spritePackingTag: 
   userData: 
