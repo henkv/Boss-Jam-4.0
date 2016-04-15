@@ -36,7 +36,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
 			if (hit != null) {
 				//Debug.Log (hit.fraction);
-				if (hit.fraction < 0.18) 
+				if (hit.fraction < 0.2) 
 				{
 					inAir = false;
 				}
