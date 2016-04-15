@@ -9,19 +9,23 @@ public class PlayerBehaviour : MonoBehaviour {
 	public float jumpOffset;
 	public float horizontalFoce;
 
-	float airTime;
 	Rigidbody2D rigidBody;
+	SpriteRenderer spriteRenderer;
+
 	bool inAir;
 	bool jumpKeyDown;
+	bool lookingRight;
 
 
 	// Use this for initialization
 	void Start () 
 	{
 		rigidBody = GetComponent<Rigidbody2D> ();
+		spriteRenderer = GetComponent<SpriteRenderer> ();
+
 		inAir = false;
-		airTime = 0;
 		jumpKeyDown = false;
+		lookingRight = true;
 	}
 	
 	// Update is called once per frame
@@ -32,7 +36,8 @@ public class PlayerBehaviour : MonoBehaviour {
 
 			if (hit != null) {
 				//Debug.Log (hit.fraction);
-				if (hit.fraction < 0.18) {
+				if (hit.fraction < 0.18) 
+				{
 					inAir = false;
 				}
 			}
@@ -55,16 +60,24 @@ public class PlayerBehaviour : MonoBehaviour {
 
 		if (Input.GetKey(leftKey))
 		{
-
 			rigidBody.AddForce (Vector2.left * horizontalFoce, ForceMode2D.Impulse);
 
+			if (lookingRight) 
+			{
+				lookingRight = false;
+				spriteRenderer.flipY = true;
+			}
 		}
 
 		if (Input.GetKey(rightKey))
 		{
 			rigidBody.AddForce (Vector2.right * horizontalFoce, ForceMode2D.Impulse);
+
+			if (!lookingRight) 
+			{
+				lookingRight = true;
+				spriteRenderer.flipY = false;
+			}
 		}
-
-
 	}
 }
