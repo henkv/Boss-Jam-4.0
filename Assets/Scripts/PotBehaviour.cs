@@ -21,6 +21,8 @@ public class PotBehaviour : MonoBehaviour
         if (potActivated)
         {
             rigidbody.isKinematic = false;
+            rigidbody.AddTorque(-133);
+            potActivated = false;
         }
 	}
 
