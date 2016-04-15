@@ -28,7 +28,7 @@ public class LeekBehaviour : MonoBehaviour
             rigidBody.isKinematic = false;
         }
 
-        else if (transform.position.y >= startPos - fallLength)
+        else if (transform.position.y <= startPos - fallLength)
         {
             rigidBody.isKinematic = true;
         }
