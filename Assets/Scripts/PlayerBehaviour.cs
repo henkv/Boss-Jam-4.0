@@ -65,8 +65,8 @@ public class PlayerBehaviour : MonoBehaviour {
 			if (lookingRight) 
 			{
 				lookingRight = false;
-
 				spriteRenderer.flipX = true;
+
 			}
 		}
 
@@ -77,7 +77,6 @@ public class PlayerBehaviour : MonoBehaviour {
 			if (!lookingRight) 
 			{
 				lookingRight = true;
-
 				spriteRenderer.flipX = false;
 			}
 		}
