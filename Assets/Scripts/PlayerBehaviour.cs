@@ -31,7 +31,7 @@ public class PlayerBehaviour : MonoBehaviour {
 			RaycastHit2D hit = Physics2D.Raycast (transform.position, Vector2.down);
 
 			if (hit != null) {
-				Debug.Log (hit.fraction);
+				//Debug.Log (hit.fraction);
 				if (hit.fraction < 0.18) {
 					inAir = false;
 				}
