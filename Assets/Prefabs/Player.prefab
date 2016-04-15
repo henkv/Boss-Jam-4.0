@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 125960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -47,7 +47,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6180538
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -76,8 +76,9 @@ MonoBehaviour:
   jumpKey: 119
   leftKey: 97
   rightKey: 100
-  jumpForce: 0.5
-  horizontalFoce: 0.2
+  jumpForce: 200
+  jumpOffset: 0.05
+  horizontalFoce: 0.25
 --- !u!212 &21245032
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -105,7 +106,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1d5bc42d66eea3e4ba7fca4a636b7e4c, type: 3}
-  m_Color: {r: 1, g: 0.36764705, b: 0.36764705, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!1001 &100100000

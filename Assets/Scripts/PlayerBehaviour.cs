@@ -6,11 +6,13 @@ public class PlayerBehaviour : MonoBehaviour {
 	public KeyCode leftKey;
 	public KeyCode rightKey;
 	public float jumpForce;
+	public float jumpOffset;
 	public float horizontalFoce;
 
 	float airTime;
 	Rigidbody2D rigidBody;
 	bool inAir;
+	bool jumpKeyDown;
 
 
 	// Use this for initialization
@@ -19,37 +21,36 @@ public class PlayerBehaviour : MonoBehaviour {
 		rigidBody = GetComponent<Rigidbody2D> ();
 		inAir = false;
 		airTime = 0;
+		jumpKeyDown = false;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		
-		RaycastHit2D hit = Physics2D.Raycast (transform.position, Vector2.down);
+		if (inAir) {
+			RaycastHit2D hit = Physics2D.Raycast (transform.position, Vector2.down);
 
-		if (hit != null) 
-		{
-			Debug.Log (hit.fraction);
-			if (hit.fraction < 0.4) 
-			{
-				inAir = false;
-				airTime = 0;
+			if (hit != null) {
+				Debug.Log (hit.fraction);
+				if (hit.fraction < 0.18) {
+					inAir = false;
+				}
 			}
 		}
 
-		if (inAir)
-		{
-			airTime += Time.deltaTime;
-		}
 
 	}
 
 	void FixedUpdate()
 	{
-		if (Input.GetKey(jumpKey) && airTime < 0.2)
+		if (Input.GetKeyDown(jumpKey) && !inAir)
 		{
+			jumpKeyDown = true;
 			inAir = true;
-			rigidBody.AddForce (Vector2.up * jumpForce, ForceMode2D.Impulse);
+			Vector3 playerPos = transform.position;
+			playerPos.y += jumpOffset;
+			transform.position = playerPos;
+			rigidBody.AddForce (Vector2.up * jumpForce, ForceMode2D.Force);
 		}
 
 		if (Input.GetKey(leftKey))
