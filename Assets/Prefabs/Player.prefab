@@ -12,7 +12,7 @@ GameObject:
   - 50: {fileID: 5075826}
   - 61: {fileID: 6180538}
   - 114: {fileID: 11456980}
-  - 95: {fileID: 9534824}
+  - 95: {fileID: 9550804}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 125960}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.66, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,10 +60,10 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.002131164, y: -0.0034098625}
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.32}
---- !u!95 &9534824
+  m_Size: {x: 0.16058922, y: 0.2773769}
+--- !u!95 &9550804
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -72,7 +72,7 @@ Animator:
   m_GameObject: {fileID: 125960}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 854c2a35a3f7057428050db357f4a86c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 15c5baefcfa0ab94caa941151186ca1f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -91,9 +91,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186d9a5bcad7d60489c418d1bc228cfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpKey: 119
-  leftKey: 97
-  rightKey: 100
+  jumpKey: 273
+  leftKey: 276
+  rightKey: 275
   jumpForce: 200
   jumpOffset: 0.05
   horizontalFoce: 0.25
@@ -123,7 +123,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8e2ecbb569f995548b9a746989c6692a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e051872a5c64b5142870dfe96aaabfda, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
