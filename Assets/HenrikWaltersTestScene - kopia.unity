@@ -479,6 +479,10 @@ Prefab:
       propertyPath: rightKey
       value: 108
       objectReference: {fileID: 0}
+    - target: {fileID: 197146, guid: 1496992b02fd0384d81c8852ebb06f4a, type: 2}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9541966, guid: 1496992b02fd0384d81c8852ebb06f4a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1496992b02fd0384d81c8852ebb06f4a, type: 2}
@@ -526,6 +530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9321b57a4439bd47b6bac9eb7aef850, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trap: {fileID: 0}
   activeColor: {r: 1, g: 0, b: 0, a: 1}
   active: 0
 --- !u!212 &680622463
@@ -656,6 +661,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &1470415014 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 197146, guid: 1496992b02fd0384d81c8852ebb06f4a, type: 2}
+  m_PrefabInternal: {fileID: 648283656}
+--- !u!95 &1470415023
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1470415014}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 956ffb63e0063a54aab4334f26573f08, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &1481085582
 Prefab:
   m_ObjectHideFlags: 0
@@ -694,6 +720,10 @@ Prefab:
     - target: {fileID: 479676, guid: b4c8f04b8111f7b4c983ce0ea322e48c, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 173026, guid: b4c8f04b8111f7b4c983ce0ea322e48c, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b4c8f04b8111f7b4c983ce0ea322e48c, type: 2}
@@ -736,6 +766,10 @@ Prefab:
     - target: {fileID: 448306, guid: 1496992b02fd0384d81c8852ebb06f4a, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 197146, guid: 1496992b02fd0384d81c8852ebb06f4a, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9541966, guid: 1496992b02fd0384d81c8852ebb06f4a, type: 2}
