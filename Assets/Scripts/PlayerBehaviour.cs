@@ -11,6 +11,7 @@ public class PlayerBehaviour : MonoBehaviour {
 
 	Rigidbody2D rigidBody;
 	SpriteRenderer spriteRenderer;
+    Animator animator;
 
 	bool inAir;
 	bool jumpKeyDown;
@@ -22,6 +23,7 @@ public class PlayerBehaviour : MonoBehaviour {
 	{
 		rigidBody = GetComponent<Rigidbody2D> ();
 		spriteRenderer = GetComponent<SpriteRenderer> ();
+        animator = GetComponent<Animator>();
 
 		inAir = false;
 		jumpKeyDown = false;
@@ -39,9 +41,19 @@ public class PlayerBehaviour : MonoBehaviour {
 				if (hit.fraction < 0.18) 
 				{
 					inAir = false;
+                    animator.SetBool("inAir", false);
 				}
 			}
 		}
+
+        if(Input.GetKey(leftKey) || Input.GetKey(rightKey))
+        {
+            animator.SetBool("isMoving", true);
+        }
+        else
+        {
+            animator.SetBool("isMoving", false);
+        }
 
 
 	}
@@ -52,7 +64,8 @@ public class PlayerBehaviour : MonoBehaviour {
 		{
 			jumpKeyDown = true;
 			inAir = true;
-			Vector3 playerPos = transform.position;
+            animator.SetBool("inAir", true);
+            Vector3 playerPos = transform.position;
 			playerPos.y += jumpOffset;
 			transform.position = playerPos;
 			rigidBody.AddForce (Vector2.up * jumpForce, ForceMode2D.Force);
