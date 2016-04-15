@@ -33,4 +33,9 @@ public class LeekBehaviour : MonoBehaviour
             rigidBody.isKinematic = true;
         }
 	}
+
+    public void trigger()
+    {
+        leekActivated = true;
+    }
 }
