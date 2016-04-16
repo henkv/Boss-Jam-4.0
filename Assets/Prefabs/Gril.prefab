@@ -106,9 +106,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 186d9a5bcad7d60489c418d1bc228cfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpKey: 105
-  leftKey: 106
-  rightKey: 108
+  jumpKey: 273
+  leftKey: 276
+  rightKey: 275
   jumpForce: 200
   jumpOffset: 0.05
   horizontalFoce: 0.25
@@ -1648,7 +1648,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5f17a090808410543a6db0ae7a612139, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e051872a5c64b5142870dfe96aaabfda, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
