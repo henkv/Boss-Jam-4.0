@@ -3,6 +3,7 @@ using System.Collections;
 
 public class DolphinFly : MonoBehaviour {
     private Vector3 startPos;
+	private Vector3 orignialStartPos;
     public float high;
     private Vector3 endPos;
     public float speed;
@@ -10,7 +11,8 @@ public class DolphinFly : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        startPos = transform.position;
+		startPos = transform.position;
+        orignialStartPos = transform.position;
         endPos = startPos;
         endPos.y += high;
 
@@ -19,6 +21,11 @@ public class DolphinFly : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+		startPos = transform.position;
+		startPos.y = orignialStartPos.y;
+		endPos = startPos;
+		endPos.y += high;
+
         if(active)
         {
             transform.position = Vector3.Lerp(transform.position, endPos, speed);

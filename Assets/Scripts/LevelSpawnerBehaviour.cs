@@ -6,6 +6,7 @@ public class LevelSpawnerBehaviour : MonoBehaviour {
 	public List<GameObject> tiles;
 	public float tileMoveSpeed;
 	public int tileWidth;
+	public float minX;
 
 	public float tileDelta;
 	private Quaternion qZero;
@@ -25,7 +26,7 @@ public class LevelSpawnerBehaviour : MonoBehaviour {
 			childPos.x -= tileMoveSpeed * Time.deltaTime;
 			child.position = childPos;
 
-			if (childPos.x < -15)
+			if (childPos.x < minX)
 				Object.Destroy (child.gameObject);
 		}
 
@@ -40,8 +41,12 @@ public class LevelSpawnerBehaviour : MonoBehaviour {
 
 	void SpawnTile()
 	{
-		Vector3 spawnPos = new Vector3(0, 0, 0);
-		GameObject tile = Instantiate(tiles[Random.Range(0, tiles.Count - 1)], transform.position, qZero) as GameObject;
+		GameObject tile = Instantiate(
+			tiles[Random.Range(0, tiles.Count - 1)], 
+			transform.position, 
+			qZero
+		) as GameObject;
+
 		tile.transform.parent = transform;
 	}
 
