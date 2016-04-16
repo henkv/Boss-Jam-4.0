@@ -13,7 +13,7 @@ public class WallOfDeathBehaviour : MonoBehaviour {
 	
 	}
 
-	void OnTriggerEnter2D(Collider2D collision)
+	void OnTriggerEnter2D(Collision2D collision)
 	{
 		Object.Destroy (collision.gameObject);
 	}
