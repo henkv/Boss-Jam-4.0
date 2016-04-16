@@ -100,7 +100,7 @@ MonoBehaviour:
   jumpForce: 350
   jumpOffset: 0.2
   horizontalFoce: 10
-  airMultiplier: 0
+  airMultiplier: 0.6
 --- !u!114 &11443906
 MonoBehaviour:
   m_ObjectHideFlags: 1
