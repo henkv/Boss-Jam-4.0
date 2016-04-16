@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class LevelSpawnerBehaviour : MonoBehaviour {
-	public GameObject grassTileNormal;
+	public List<GameObject> tiles;
 	public float tileMoveSpeed;
 	public int tileWidth;
 
@@ -23,21 +24,24 @@ public class LevelSpawnerBehaviour : MonoBehaviour {
 			childPos = child.position;
 			childPos.x -= tileMoveSpeed * Time.deltaTime;
 			child.position = childPos;
+
+			if (childPos.x < -15)
+				Object.Destroy (child.gameObject);
 		}
 
 		tileDelta += tileMoveSpeed * Time.deltaTime;
 
-		if (tileDelta >= 0.9f) 
+		if (tileDelta >= 7f) 
 		{
 			SpawnTile ();
-			tileDelta -= 0.9f;
+			tileDelta -= 7f;
 		}
 	}
 
 	void SpawnTile()
 	{
 		Vector3 spawnPos = new Vector3(0, 0, 0);
-		GameObject tile = Instantiate(grassTileNormal, transform.position, qZero) as GameObject;
+		GameObject tile = Instantiate(tiles[Random.Range(0, tiles.Count - 1)], transform.position, qZero) as GameObject;
 		tile.transform.parent = transform;
 	}
 
