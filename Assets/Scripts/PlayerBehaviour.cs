@@ -8,14 +8,13 @@ public class PlayerBehaviour : MonoBehaviour {
 	public float jumpForce;
 	public float jumpOffset;
 	public float horizontalFoce;
+	public float airMultiplier;
 
-	Rigidbody2D rigidBody;
-	SpriteRenderer spriteRenderer;
-    Animator animator;
+	private Rigidbody2D rigidBody;
+	private SpriteRenderer spriteRenderer;
+	private Animator animator;
 
 	bool inAir;
-	bool jumpKeyDown;
-	bool lookingRight;
 
 
 	// Use this for initialization
@@ -26,25 +25,21 @@ public class PlayerBehaviour : MonoBehaviour {
         animator = GetComponent<Animator>();
 
 		inAir = false;
-		jumpKeyDown = false;
-		lookingRight = true;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
-		if (inAir) {
-			RaycastHit2D hit = Physics2D.Raycast (transform.position, Vector2.down);
+		RaycastHit2D hit = Physics2D.Raycast (transform.position, Vector2.down);
 
-			if (hit != null) {
-				//Debug.Log (hit.fraction);
-				if (hit.fraction < 0.18) 
-				{
-					inAir = false;
-                    animator.SetBool("inAir", false);
-				}
-			}
+		if (hit.collider != null && hit.fraction < 0.2) {
+			inAir = false;
+		} else {
+			inAir = true;
 		}
+
+		animator.SetBool ("inAir", inAir);
+
 
         if(Input.GetKey(leftKey) || Input.GetKey(rightKey))
         {
@@ -54,17 +49,15 @@ public class PlayerBehaviour : MonoBehaviour {
         {
             animator.SetBool("isMoving", false);
         }
-
-
 	}
 
 	void FixedUpdate()
 	{
 		if (Input.GetKeyDown(jumpKey) && !inAir)
 		{
-			jumpKeyDown = true;
 			inAir = true;
             animator.SetBool("inAir", true);
+
             Vector3 playerPos = transform.position;
 			playerPos.y += jumpOffset;
 			transform.position = playerPos;
@@ -73,22 +66,20 @@ public class PlayerBehaviour : MonoBehaviour {
 
 		if (Input.GetKey(leftKey))
 		{
-			rigidBody.AddForce (Vector2.left * horizontalFoce, ForceMode2D.Impulse);
+			rigidBody.AddForce (Vector2.left * horizontalFoce * (inAir ? airMultiplier : 1.0f), ForceMode2D.Force);
 
-			if (lookingRight) 
+			if (!spriteRenderer.flipX) 
 			{
-				lookingRight = false;
 				spriteRenderer.flipX = true;
 			}
 		}
 
 		if (Input.GetKey(rightKey))
 		{
-			rigidBody.AddForce (Vector2.right * horizontalFoce, ForceMode2D.Impulse);
+			rigidBody.AddForce (Vector2.right * horizontalFoce * (inAir ? airMultiplier : 1.0f), ForceMode2D.Force);
 
-			if (!lookingRight) 
+			if (spriteRenderer.flipX) 
 			{
-				lookingRight = true;
 				spriteRenderer.flipX = false;
 			}
 		}

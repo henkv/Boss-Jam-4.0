@@ -3,9 +3,9 @@ using System.Collections;
 
 public class PairBehaviour : MonoBehaviour {
 	public GameObject significantOther;
+	public bool inLove;
 
 	private ParticleSystem particleSystem;
-	private bool inLove;
 
 	// Use this for initialization
 	void Start () {
