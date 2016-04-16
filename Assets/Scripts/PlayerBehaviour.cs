@@ -32,7 +32,7 @@ public class PlayerBehaviour : MonoBehaviour {
 	{
 		RaycastHit2D hit = Physics2D.Raycast (transform.position, Vector2.down);
 
-		if (hit.collider != null && hit.fraction < 0.5) {
+		if (hit.collider != null && hit.fraction < 0.2) {
 			inAir = false;
 		} else {
 			inAir = true;

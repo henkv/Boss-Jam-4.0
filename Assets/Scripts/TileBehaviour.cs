@@ -10,7 +10,6 @@ public class TileBehaviour : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
 		if (transform.position.x < xMin) {
 			Object.Destroy (gameObject);		
 		}
