@@ -94,12 +94,12 @@ GameObject:
   m_Component:
   - 4: {fileID: 60080832}
   - 212: {fileID: 60080831}
-  - 61: {fileID: 60080833}
   - 61: {fileID: 60080838}
   - 61: {fileID: 60080837}
   - 61: {fileID: 60080836}
   - 61: {fileID: 60080835}
   - 61: {fileID: 60080834}
+  - 61: {fileID: 60080833}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -160,9 +160,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -0.29038173, y: -0.5242097}
+  m_Offset: {x: 0.49496472, y: -0.4571554}
   serializedVersion: 2
-  m_Size: {x: 2.7484384, y: 0.21595752}
+  m_Size: {x: 0.31161165, y: 0.7919711}
 --- !u!61 &60080834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -174,9 +174,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -2.3969579, y: -0.5242092}
+  m_Offset: {x: 0.16498846, y: -0.711513}
   serializedVersion: 2
-  m_Size: {x: 0.6460848, y: 0.23158133}
+  m_Size: {x: 0.32536113, y: 0.28325564}
 --- !u!61 &60080835
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -188,9 +188,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0.16806781, y: -0.26410586}
+  m_Offset: {x: 1.6980051, y: -1.0380516}
   serializedVersion: 2
-  m_Size: {x: 0.31795263, y: 0.3036101}
+  m_Size: {x: 1.2052987, y: 0.08389741}
 --- !u!61 &60080836
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -202,9 +202,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 2.509004, y: -0.5322127}
+  m_Offset: {x: 2.5057602, y: -0.96243256}
   serializedVersion: 2
-  m_Size: {x: 0.4219923, y: 0.21557438}
+  m_Size: {x: 0.42847896, y: 0.2351352}
 --- !u!61 &60080837
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -216,9 +216,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 1.6886759, y: -0.59223646}
+  m_Offset: {x: -0.2921673, y: -0.96586984}
   serializedVersion: 2
-  m_Size: {x: 1.1983032, y: 0.095526814}
+  m_Size: {x: 2.7658136, y: 0.22826016}
 --- !u!61 &60080838
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -230,9 +230,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0.48419413, y: -0.024009049}
+  m_Offset: {x: -2.4163923, y: -0.9624323}
   serializedVersion: 2
-  m_Size: {x: 0.30994803, y: 0.7838018}
+  m_Size: {x: 0.6072147, y: 0.23513567}
 --- !u!1 &515293474
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +635,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 1.670777
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -656,11 +656,15 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1228859691}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: -0.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &1275531732 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 173026, guid: b4c8f04b8111f7b4c983ce0ea322e48c, type: 2}
+  m_PrefabInternal: {fileID: 1481085582}
 --- !u!1 &1470415014 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 197146, guid: 1496992b02fd0384d81c8852ebb06f4a, type: 2}
@@ -725,6 +729,10 @@ Prefab:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11471520, guid: b4c8f04b8111f7b4c983ce0ea322e48c, type: 2}
+      propertyPath: significantOther
+      value: 
+      objectReference: {fileID: 1940709406}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b4c8f04b8111f7b4c983ce0ea322e48c, type: 2}
   m_IsPrefabParent: 0
@@ -771,6 +779,10 @@ Prefab:
       propertyPath: m_Layer
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11416132, guid: 1496992b02fd0384d81c8852ebb06f4a, type: 2}
+      propertyPath: significantOther
+      value: 
+      objectReference: {fileID: 1275531732}
     m_RemovedComponents:
     - {fileID: 9541966, guid: 1496992b02fd0384d81c8852ebb06f4a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1496992b02fd0384d81c8852ebb06f4a, type: 2}
@@ -816,7 +828,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 666
   m_Sprite: {fileID: 21300000, guid: 85de66206e28cee45bc8172ec3285574, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
